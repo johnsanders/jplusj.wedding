@@ -4,6 +4,9 @@
 .nav a {
 	color:white;
 }
+.navbar-brand {
+	color:white;
+}
 .nav-pills .nav-link.active, .show > .nav-pills .nav-link {
 	background-color:rgba(0,0,0,0.2);
 }
