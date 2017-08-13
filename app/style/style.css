@@ -1,0 +1,14 @@
+.nav {
+	padding-top:5px;
+}
+.nav a {
+	color:white;
+}
+.nav-pills .nav-link.active, .show > .nav-pills .nav-link {
+	background-color:rgba(0,0,0,0.2);
+}
+.container-fluid {
+	margin:0;
+	padding:0;
+}
+
