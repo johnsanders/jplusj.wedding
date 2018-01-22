@@ -7,7 +7,7 @@
     "prod": "NODE_ENV=production webpack -p --color --progress --output-path='./dist'",
     "dev": "webpack --color --progress --output-path='./dev'",
     "watch": "webpack --watch --color --progress --output-path='./dev'",
-    "server": "webpack-dev-server --content-base dev/"
+    "server": "webpack-dev-server"
   },
   "author": "John Sanders",
   "license": "ISC",

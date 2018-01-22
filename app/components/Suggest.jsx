@@ -28,7 +28,7 @@ class Suggest extends React.Component {
 	render(){
 		return(
 			<div>
-				<Nav />
+				<Nav path={this.props.match.path} />
 				<Slides />
 				<div className="row" style={{marginTop:"40px"}}>
 					<div className="col-sm-12">

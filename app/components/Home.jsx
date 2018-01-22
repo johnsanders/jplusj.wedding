@@ -12,6 +12,7 @@ class Home extends React.Component {
 		super(props);
 		this.state = {
 			rsvpName:"",
+			rsvpEmail:"",		
 			rsvpAnswer:"yes",
 			rsvpGuests:"",
 			notificationStatus:"",
@@ -20,9 +21,14 @@ class Home extends React.Component {
 		};
 		autobind(this);
 	}
+	handleUpdateInput(e){
+		this.setState( {[e.target.name]:e.target.value} );
+	}
 	handleSubmitRsvp(e){
 		e.preventDefault();
-		axios.post("/saveRsvp.php", jQuery.param({message:`${this.state.rsvpName} ${this.state.rsvpAnswer} ${this.state.rsvpGuests}`}))
+		let message = this.state.rsvpName + " " + this.state.rsvpEmail + " ";
+		message += this.state.rsvpAnswer + " " + this.state.rsvpGuests;
+		axios.post("/saveRsvp.php", jQuery.param({message}))
 			.then( (res) => {
 				this.setState( {
 					notificationStatus:"success",
@@ -34,8 +40,16 @@ class Home extends React.Component {
 	render(){
 		return (
 			<div className="container-fluid">
-				<Nav />
+				<Nav path={this.props.match.path} />
 				<Slides />
+				<div className="row">
+					<div className="col-sm-6 text-center">
+						jwsanders@gmail.com
+					</div>
+					<div className="col-sm-6 text-center">
+						mr.jonathan.pizarro@gmail.com
+					</div>
+				</div>
 				{ (this.state.rsvpSent ? null :
 					<Rsvp 
 						rsvpName={this.state.rsvpName}

@@ -4,7 +4,7 @@ import Slides from "./Slides";
 
 const Donate = props => (
 	<div>
-		<Nav />
+		<Nav path={props.match.path} />
 		<Slides />
 		<div className="row" style={{marginTop:"40px"}}>
 			<div className="col-sm-12 text-center">
@@ -12,13 +12,10 @@ const Donate = props => (
 					We&rsquo;re serious about not requesting gifts. Just turn up and have a good time.
 				</p>
 				<p>
-					But if you really want to make a contribution toward our honeymoon, we&rsquo;ve set up a PayPal account.
+					But if you really want to make a contribution toward our honeymoon, we&rsquo;ve set up a PayPal account, if you'd like to use that.
 				</p>
 				<p>
 					You don&lsquo;t need a PayPal account to use it.
-				</p>
-				<p>
-					Just click the donate button below then find the section <strong>"Don't have a PayPal account?"</strong> and click <strong>"Continue</strong>."
 				</p>
 			</div>	
 		</div>

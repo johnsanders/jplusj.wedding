@@ -8,8 +8,8 @@ const Rsvp = (props) => (
 					<h2>RSVP!</h2>
 				</div>
 				<div className="form-group text-center">
-					<div className="col-sm-4" style={{display:"inline-block"}}>
-						<label htmlFor="name">Name</label>
+					<div className="col-sm-3" style={{display:"inline-block"}}>
+						<label htmlFor="rsvpName">Name</label>
 						<input
 							type="text"
 							name="rsvpName"
@@ -18,7 +18,17 @@ const Rsvp = (props) => (
 							onChange={props.handleUpdateInput}
 						/>
 					</div>
-					<div className="col-sm-4" style={{display:"inline-block"}}>
+					<div className="col-sm-3" style={{display:"inline-block"}}>
+						<label htmlFor="rsvpEmail">Email</label>
+						<input
+							type="text"
+							name="rsvpEmail"
+							className="form-control text-center" 
+							value={props.email}
+							onChange={props.handleUpdateInput}
+						/>
+					</div>
+					<div className="col-sm-3" style={{display:"inline-block"}}>
 						<label htmlFor="rsvpAnswer">Response</label>
 						<select
 							className="form-control"
@@ -31,7 +41,7 @@ const Rsvp = (props) => (
 						</select>
 					</div>
 					{(props.rsvpAnswer === "no" ? null :
-					<div className="col-sm-4" style={{display:"inline-block"}}>
+					<div className="col-sm-3" style={{display:"inline-block"}}>
 						<label htmlFor="name">Number of Guests</label>
 						<input 
 							type="text"
