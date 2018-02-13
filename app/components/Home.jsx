@@ -50,6 +50,7 @@ class Home extends React.Component {
 						mr.jonathan.pizarro@gmail.com
 					</div>
 				</div>
+				{ window.Promise ? null : <h3 className="text-center" style={{marginTop:"20px", color:"red"}}>Seems you're using an older browser.  This might not work.</h3> }
 				{ (this.state.rsvpSent ? null :
 					<Rsvp 
 						rsvpName={this.state.rsvpName}

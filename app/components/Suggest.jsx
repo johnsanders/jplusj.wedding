@@ -30,6 +30,7 @@ class Suggest extends React.Component {
 			<div>
 				<Nav path={this.props.match.path} />
 				<Slides />
+				{ window.Promise ? null : <h3 className="text-center" style={{marginTop:"20px", color:"red"}}>Seems you're using an older browser.  This might not work.</h3> }
 				<div className="row" style={{marginTop:"40px"}}>
 					<div className="col-sm-12">
 						<form>
