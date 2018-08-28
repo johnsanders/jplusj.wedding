@@ -5,7 +5,7 @@ import Rsvp from "./Rsvp";
 import Notification from "./Notification";
 import autobind from "react-autobind";
 import axios from "axios";
-import jQuery from "jquery";
+import { param } from "jquery";
 
 class Home extends React.Component {
 	constructor(props) {
@@ -28,7 +28,7 @@ class Home extends React.Component {
 		e.preventDefault();
 		let message = this.state.rsvpName + " " + this.state.rsvpEmail + " ";
 		message += this.state.rsvpAnswer + " " + this.state.rsvpGuests;
-		axios.post("/saveRsvp.php", jQuery.param({message}))
+		axios.post("/saveRsvp.php", param({message}))
 			.then( (res) => {
 				this.setState( {
 					notificationStatus:"success",
